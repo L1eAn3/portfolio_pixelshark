@@ -1,6 +1,239 @@
 body {
     font-family: "Space Grotesk", sans-serif;
-    background-color: #141414;
+    background: radial-gradient(circle at 30% 40%, #1a1a40, #0b0b1a 70%);
     color: white;
+    cursor: no-drop;
+    line-height: 1.6;
+}
 
+html {
+    scroll-behavior: smooth;
+}
+
+.github-logo {
+    border-radius: 20%;
+    border: 2px solid #aaa;
+}
+
+.github-logo:hover {
+    border-color: #7c3aed;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px #7c3aed;
+}
+
+.logo {
+    width: 30px;
+    vertical-align: middle;
+    margin-right: 0.3px;
+}
+
+section {
+    padding: 200px 30%;
+}
+
+section {
+    padding: 200px 30%;
+}
+
+section ul {
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 9px;
+
+}
+
+#umiejetnosci {
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.03);
+
+}
+
+#umiejetnosci li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+#umiejetnosci h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+#umiejetnosci ul {
+
+    display: grid;
+    border: #757586 4px solid;
+    background-color: #1a1a40;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    list-style: none;
+    width: fit-content;
+    margin: 0 auto;
+    padding: 20px 40px;
+    border-radius: 12px;
+
+}
+
+#projekty {
+    display: grid;
+    gap: 30px;
+    padding: 20px 0;
+    justify-items: center;
+
+}
+
+
+
+
+
+
+#pro {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+header {
+    position: fixed;
+    width: 97%;
+    top: 0;
+    left: 0;
+    padding: 20px 50px;
+    background: rgba(11, 11, 26, 0.6);
+    backdrop-filter: blur(8px);
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #aaa;
+    font-weight: 500;
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #7c3aed;
+    text-shadow: #7c3aed 0px 2px 5px;
+}
+
+nav li:after {
+    content: '/>';
+    color: #666;
+    font-weight: 700;
+}
+
+#hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+#hero h1 span {
+    color: #7c3aed;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+.separator2 {
+    background: radial-gradient(circle at 50% 50%, #1a1a40, #1a1a40 90%);
+    height: 120px;
+    width: 100%;
+}
+
+.separator {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background: url("ikony/tlo.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#omnie p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+#umiejetnosci p {
+    display: flex;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #bbb;
+}
+
+
+#hero p,
+#hero h1 {
+    margin: 0;
+}
+
+#omnie pre {
+    border: #757586 4px solid;
+    background: rgba(255, 255, 255, 0.03);
+    width: 90%;
+    padding: 30px;
+    border-radius: 12px;
+    font-family: 'Fira Code', monospace;
+    font-size: 0.9rem;
+}
+
+
+#omnie {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+}
+
+
+#hero,
+#omnie {
+    flex: 1;
+}
+
+#hero-omnie {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 90vh;
+    padding: 120px 10% 0 10%;
+    gap: 80px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    font-family: "Bitcount Prop Single", system-ui;
 }

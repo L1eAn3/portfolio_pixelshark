@@ -1,83 +1,211 @@
 <!DOCTYPE html>
 <html lang="pl">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Natan Dziadek</title>
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Bitcount+Prop+Single:wght@100..900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    
-<header>
-    <nav>
-        <ul>
-            <li><a href="#hero">Start</a></li>
-            <li><a href="#omnie">O mnie</a></li>
-            <li><a href="#umiejetnosci">Umiejętności</a></li>
-            <li><a href="#projekt">Projekty</a></li>
-            <li><a href="#kontakt">Kontakt</a></li>
-        </ul>
-    </nav>
 
-    <section id="hero">
-        <h1>Natan Dziadek</h1>
-        <p>Programista | Pasjonat technologii</p>
-        <p>Junior Frontend Developer</p>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#hero-omnie">Start</a></li>
+                <li><a href="#omnie">O mnie</a></li>
+                <li><a href="#umiejetnosci">Umiejętności</a></li>
+                <li><a href="#projekty">Projekty</a></li>
+                <li><a href="#kontakt">Kontakt</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main>
+    <section id="hero-omnie">
+        <section id="hero">
+            <p>Start/></p>
+            <h1>Natan Dziadek</h1>
+            <p>Programista | Pasjonat technologii</p>
+            <p>Junior Frontend Developer</p>
+        </section>
+
+        <a href="https://github.com/L1eAn3" target="_blank">
+            <img src="ikony/github.png" alt="GitHub Logo" class="github-logo">
+        </a>
     </section>
+
+
 
     <section id="omnie">
-        <h2>O mnie</h2>
-        <p>Cześć! Jestem Natan Dziadek, programistą z pasją do tworzenia innowacyjnych rozwiązań. Specjalizuję się w tworzeniu aplikacji webowych i mobilnych, a także w projektowaniu interfejsów użytkownika. Moim celem jest dostarczanie wysokiej jakości 
-        oprogramowania, które spełnia potrzeby użytkowników.</p>
+        <p>O mnie/></p>
+        <pre>
+1 class NatanDziadek {
+2  constructor() {
+3        this.rola = "Junior Frontend Developer";
+4        this.wiek = 18;
+5        this.pasje = ["programowanie", "technologia", "tworzenie stron internetowych"];
+6        this.cel = "Rozwijać się jako programista i tworzyć innowacyjne projekty.";
+7        this.mail ="natan.dziadek@mojcosinus.pl";
+8        this.prawojazdy = "Posiadam prawo jazdy kategorii B";
+9    }
+10 }
+11
+12 edukacja() {
+13        return [
+14            {
+15                '2022-2027': 'Technikum Cosinus Szkoła dla Młodzieży - Programista'
+16             },
+17        ];
+18    }
+19 socialMedia() {
+20        return [
+21            {
+22                'GitHub': 'https://github.com/L1eAn3'
+23            },
+24            {
+25                'Discord': 'aleselece'
+26            },
+27            {  
+28                'Instagram': 'https://www.instagram.com/zulicydziadu/'
+29            },
+30     ];  
+31   }
+    </pre>
     </section>
+
+    <div class="separator2">
+
+
+    </div>
 
     <section id="umiejetnosci">
-        <h2>Umiejętności</h2>
+        <p>Umiejętności/></p>
         <ul>
-            <li>HTML5, CSS3, JavaScript,PHP</li>
-            <li>Python,Android Studio, Minecraft Serwery</li>
-            <li>Git, GitHub, Certyfikat Bezpieczenstwa w internecie</li>
+            <li>
+                <img src="ikony/javascript.webp" alt="JavaScript Logo" class="logo">
+                JavaScript
+            </li>
+            <li>
+                <img src="ikony/python.webp" alt="Python Logo" class="logo">
+                Python
+            </li>
+            <li>
+                <img src="ikony/php.webp" alt="PHP Logo" class="logo">
+                PHP
+            </li>
+            <li>
+                <img src="ikony/html.webp" alt="HTML Logo" class="logo">
+                HTML
+            </li>
+            <li>
+                <img src="ikony/css.webp" alt="CSS Logo" class="logo">
+                CSS
+            </li>
+            <li>
+                <img src="ikony/git.webp" alt="Git Logo" class="logo">
+                Git
+            </li>
+            <li>
+                <img src="ikony/github.webp" alt="GitHub Logo" class="logo">
+                GitHub
+            </li>
+            <li>
+                <img src="ikony/android.webp" alt="Android Studio Logo" class="logo">
+                Android Studio
+            </li>
+            <li>
+                <img src="ikony/cer.webp" alt="Certyfikat Logo" class="logo">
+                Certyfikat Bezpieczeństwo w Interecie
+            </li>
+            <li>
+                <img src="ikony/komp.webp" alt="Komputer Logo" class="logo">
+                Składanie i konfiguracja komputerów
+            </li>
+            <li>
+                <img src="ikony/wordpress.webp" alt="WordPress Logo" class="logo">
+                WordPress/WooCommerce
+            </li>
         </ul>
-
-    <section id="projekt">
-        <h2>Projekty</h2>
-        <div class="projekt">
-            <h3>Projekt 1: Strona internetowa</h3>
-            <p>Opis projektu: Strona internetowa stworzona z myślą o użytkownikach pozwala sprawdzić czy Twój Adres email lub hasło zostały ujawnione w wyniku wycieku danych.</p>
-        </div>
-        <div class="projekt">
-            <h3>Projekt 2: Aplikacja PROXY na komputerze</h3>
-            <p>Opis projektu: Aplikacja PROXY stworzona w Pythonie, która umożliwia użytkownikom bezpieczne i anonimowe przeglądanie internetu poprzez przekazywanie żądań przez serwer proxy. (Brak serwerow proxy na razie)</p>
-        </div>
-
-    <section id="projekt">
-        <h3>Projekt 3: Tworzenie serwerów Minecraft Fuzjamc.net</h3>
-        <p>Opis projektu: Projekt zlecony Serwer Minecraft stworzone przez mnie, które są dostępne dla społeczności. | Wgyrwanie pluginów, ANTICRASH,</p>
     </section>
 
-<main id="kontakt">
-    <article class="card">
-        
- 
+    <div class="separator">
+    </div>
 
-        <h1>Natan Dziadek</h1>
-        <p class="lok">Polska, Łódź</p>
-        <p class="bio">Programista oprogramowania | Python, PHP, strony internetowe, aplikacje mobilne, serwery Minecraft i testowanie aplikacji"</p>
+    <section id="projekty">
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img_avatar.png" alt="Projekt 1" class="projekt-img">
+                    <h3>Projekt 1: Strona internetowa</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Strona do sprawdzania wycieków danych.</p>
+                </div>
+            </div>
+        </div>
 
-        <ul class="linki">
-            <li><a href="https://github.com/L1eAn3">GitHub</a></li>
-            <li><a href="#">Discord: iselece</a></li>
-            <li><a href="https://www.instagram.com/zulicydziadu/">Instagram</a></li>
-        </ul>
-    </article>
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img_avatar.png" alt="Projekt 2" class="projekt-img">
+                    <h3>Projekt 2: Aplikacja PROXY</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Aplikacja w Pythonie do anonimowego przeglądania internetu (bez serwerów).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img_avatar.png" alt="Projekt 3" class="projekt-img">
+                    <h3>Projekt 3: Serwery Minecraft</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Tworzenie i zabezpieczanie serwerów Minecraft (Fuzjamc.net).</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img_avatar.png" alt="Projekt 4" class="projekt-img">
+                    <h3>Projekt 4: SlodkiZakatek</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Strona internetowa dla firmy sprzedającej produkty własnoręcznie robione.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="flip-card">
+            <div class="flip-card-inner">
+                <div class="flip-card-front">
+                    <img src="img_avatar.png" alt="Projekt 5" class="projekt-img">
+                    <h3>Projekt 5: DiscordBOT LeanBOT</h3>
+                </div>
+                <div class="flip-card-back">
+                    <p>Bot do zarządzania serwerami Discord.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </main>
+
+
+
 
     <footer>
-        <p>&copy; 2026 Natan Dziadek | Portfolio</p>
+        <p>&copy; Made with ❤️ by Natan Dziadek. 2026 - Portfolio</p>
     </footer>
-</main>
-
-
 
 </body>
+
 </html>
