@@ -17,8 +17,8 @@ html {
 
 .github-logo:hover {
     border-color: #7c3aed;
-    transform: scale(1.05);
-    box-shadow: 0 0 10px #7c3aed;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 20px #7c3aed;
 }
 
 .logo {
@@ -64,7 +64,6 @@ section ul {
 }
 
 
-
 #umiejetnosci ul {
 
     display: grid;
@@ -73,7 +72,6 @@ section ul {
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
     list-style: none;
-    width: fit-content;
     margin: 0 auto;
     padding: 20px 40px;
     border-radius: 12px;
@@ -81,11 +79,85 @@ section ul {
 }
 
 #projekty {
-    display: grid;
-    gap: 30px;
+    background: rgba(255, 255, 255, 0.03);
     padding: 20px 0;
-    justify-items: center;
+}
 
+.projekty-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+}
+
+.flip-card {
+  background-color: transparent;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f1f1f1;
+  border-radius: 15px;
+  perspective: 1000px;
+  box-shadow: #f1f1f1 0px 7px 10px 0px; 
+}
+
+
+
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.projekty-tytul {
+    color: #aaa;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+  
+}
+
+.slodkizakatek {
+    text-decoration: none;
+    color: #7c3aed;
+}
+
+.flip-card:hover {
+    text-shadow: #7c3aed 0px 2px 10px;
+    
+
+}
+
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; 
+  backface-visibility: hidden;
+}
+
+
+.flip-card-front {
+  background-color: #1a1a40;
+  border-radius: 15px;
+  color: rgb(255, 255, 255);
+}
+
+
+
+.flip-card-back {
+  background-color: #1a1a40;;
+  border-radius: 15px;
+  color: white;
+  transform: rotateY(180deg);
 }
 
 
@@ -186,11 +258,21 @@ nav li:after {
     color: #bbb;
 }
 
+#umiejetnosci ul:hover {
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 20px #7c3aed;
+}
+
 #umiejetnosci p {
     display: flex;
     justify-content: center;
     font-size: 1.2rem;
     color: #bbb;
+}
+
+#omnie pre:hover {
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 20px #7c3aed;
 }
 
 
@@ -207,6 +289,13 @@ nav li:after {
     border-radius: 12px;
     font-family: 'Fira Code', monospace;
     font-size: 0.9rem;
+    
+}
+
+#omnie pre:hover {
+    border-color: #7c3aed;
+    transition: all 0.3s ease-in;
+    box-shadow: 0 0 20px #7c3aed;
 }
 
 
@@ -217,11 +306,21 @@ nav li:after {
     background: rgba(255, 255, 255, 0.03);
 }
 
+.github-link {
+    display: none;
+    padding: 0% 15px 15px 10px;
+    color: #002fff;
+    font-weight: 500;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
 
 #hero,
 #omnie {
     flex: 1;
 }
+
 
 #hero-omnie {
     display: flex;
@@ -237,3 +336,108 @@ footer {
     justify-content: center;
     font-family: "Bitcount Prop Single", system-ui;
 }
+
+
+
+
+
+@media screen and (max-width: 768px) {
+    .github-logo {
+        display: none;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .github-link {
+        display: block;
+    }
+
+    #omnie pre {
+        width: 224%;
+        font-size: xx-small;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+
+    }
+
+    #umiejetnosci ul {
+        display: grid;
+        grid-template-columns: repeat(1, 3fr);
+        width: 60%;
+
+    }
+    
+}
+
+.develp::after {
+    content: " _";
+    animation: writing 1.5s infinite alternate;
+}
+
+
+
+@keyframes writing {
+    0% {
+        content: " _";
+    }
+
+    5% {
+        content: " J_";
+    }
+
+    10% {
+        content: " Ju";
+    }
+
+    15% {
+        content: " Jun_";
+    }
+
+    20% {
+        content: " Juni";
+    }
+
+    25% {
+        content: " Junior_";
+    }
+
+    30% {
+        content: " Junior F";
+    }
+
+    40% {
+        content: " Junior Fro_";
+    }
+
+    50% {
+        content: " Junior Front";
+    }
+
+    60% {
+        content: " Junior Fronte_";
+    }
+
+    70% {
+        content: " Junior Frontend";
+    }
+
+    80% {
+        content: " Junior Frontend D_";
+    }
+
+    90% {
+        content: " Junior Frontend Devel";
+    }
+
+    100% {
+        content: " Junior Frontend Developer_";
+    }
+}
+
+
+
