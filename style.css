@@ -43,8 +43,10 @@ section ul {
 }
 
 #umiejetnosci {
+    display: grid;
     margin-top: 100px;
     justify-content: center;
+    align-items: center;
     background: rgba(255, 255, 255, 0.03);
 
 
@@ -57,8 +59,8 @@ section ul {
 }
 
 #umiejetnosci h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
+    font-size: 1.2rem;
+    color: #bbb;
     margin-bottom: 20px;
     text-align: center;
 }
@@ -75,8 +77,8 @@ section ul {
     margin: 0 auto;
     padding: 20px 40px;
     border-radius: 12px;
-    animation: fade 1.5s ease forwards; 
-    opacity: 0;  
+    animation: fade 1.5s ease forwards;
+    opacity: 0;
     transform: scale(0.5);
 
 }
@@ -89,9 +91,10 @@ section ul {
 
 .projekty-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
+    grid-template-columns: repeat(auto-fit, minmax(390px, 1fr));
+    gap: 30px;
     justify-items: center;
+    padding: 20px;
 }
 
 .hero,
@@ -134,10 +137,13 @@ section ul {
     background-color: transparent;
     width: 300px;
     height: 200px;
+    max-width: 100%;
+    max-height: 100%;
     border: 1px solid #f1f1f1;
     border-radius: 15px;
     perspective: 1000px;
     box-shadow: #f1f1f1 0px 7px 10px 0px;
+    z-index: 100;
 }
 
 
@@ -150,6 +156,7 @@ section ul {
     text-align: center;
     transition: transform 0.8s;
     transform-style: preserve-3d;
+    z-index: 100;
 }
 
 .projekty-tytul {
@@ -163,6 +170,7 @@ section ul {
     padding: 10px;
     font-size: 1rem;
     color: #bbb;
+    z-index: 100;
 }
 
 .flip-karta:hover .flip-karta-srodek {
@@ -196,12 +204,8 @@ section ul {
     background-color: #1a1a40;
     border-radius: 15px;
     color: rgb(255, 255, 255);
+    z-index: 100;
 }
-
-
-
-
-
 
 
 
@@ -211,10 +215,8 @@ section ul {
     border-radius: 15px;
     color: white;
     transform: rotateY(180deg);
+    z-index: 100;
 }
-
-
-
 
 
 
@@ -234,6 +236,7 @@ header {
     background: rgba(11, 11, 26, 0.6);
     backdrop-filter: blur(8px);
     z-index: 9999;
+    box-sizing: border-box;
 }
 
 nav {
@@ -344,86 +347,92 @@ nav li:after {
     border-radius: 12px;
     font-family: 'Fira Code', monospace;
     font-size: 0.9rem;
-    animation: fade 1.5s ease forwards; 
-    opacity: 0;  
+    animation: fade 1.5s ease forwards;
+    opacity: 0;
     transform: scale(0.5);
 
 }
 
-@keyframes fade {
-    to {
-        opacity: 1;
-        transform: scale(1);
-    }
+
+.tlo {
+    top: 150px;
+    right: 10%;
+    left: 4%;
+    width: 100%;
+    height: calc(90% - 60px);
+    border: 2px solid #908f928c;
+    background: rgba(255, 255, 255, 0.03);
+    border-radius: 10px;
+    z-index: -1;
 }
-
-
-
 
 
 
 #omnie {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.03);
-  padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    padding: 40px 20px;
 }
 
 .edytor {
-  width: 60%;
-  max-width: 300%;
-  background-color: #1e1e2f;
-  border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-  overflow: hidden;
-  font-family: 'Fira Code', monospace;
-  margin-top: 20px;
-  animation: fade 1.5s ease forwards;
-  opacity: 0;
+    width: 90%;
+    max-width: 900px;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    font-family: 'Fira Code', monospace;
+    margin-top: 20px;
+    animation: fade 1.5s ease forwards;
+    opacity: 0;
 }
 
 .edytor-2 {
-  display: flex;
-  align-items: center;
-  background-color: #2b2b3b;
-  padding: 8px 12px;
-  gap: 10px;
+    display: flex;
+    background-color: #2b2b3b;
+    padding: 8px 12px;
+    gap: 10px;
 }
 
 .przyciski span {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
 }
 
-.zam { background: #ff5f56; }
-.mini { background: #ffbd2e; }
-.max { background: #27c93f; }
+.zam {
+    background: #ff5f56;
+}
 
-.plik{
-  color: #ccc;
-  font-size: 0.9rem;
-  font-weight: 500;
+.mini {
+    background: #ffbd2e;
+}
+
+.max {
+    background: #27c93f;
+}
+
+.plik {
+    color: #ccc;
+    font-size: 0.9rem;
+    font-weight: 500;
 }
 
 pre {
-  margin: 0;
-  padding: 20px;
-  color: #d4d4d4;
-  font-size: 0.95rem;
-  line-height: 1.4;
-  overflow-x: auto;
+    margin: 0;
+    padding: 20px;
+    color: #d4d4d4;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    white-space: pre;
+    overflow-x: auto;
 }
 
 
-@keyframes fade {
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
+
 
 .github-link {
     display: none;
@@ -454,112 +463,117 @@ pre {
 #hero-omnie::before {
     content: "";
     position: absolute;
-    top: 150px;  
+    top: 150px;
     right: 10%;
     left: 4%;
-    width: 90%; 
-    height: calc(90% - 60px); 
+    width: 90%;
+    height: calc(90% - 60px);
     border: 2px solid #908f928c;
     background: rgba(255, 255, 255, 0.03);
-    border-radius: 10px; 
-    pointer-events: none; 
+    border-radius: 10px;
+    pointer-events: none;
 }
 
 
 
 footer {
-    display: flex;
+    display: grid;
     justify-content: center;
     font-family: "Bitcount Prop Single", system-ui;
 }
 
 
 
-@media screen and (max-width: 768px) {
-    .github-logo {
-        display: none;
-    }
+#kontakt {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 120px;
+    padding: 80px 10%;
+}
 
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
+.kontakt-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    width: 100%;
+    max-width: 1100px;
+    padding: 60px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 2px solid #908f928c;
+}
 
-    .github-link {
-        display: block;
-    }
+.kontakt-img {
+    border-color: #7c3aed;
+    box-shadow: 0 0 20px #7c3aed;
+    border: 2px solid #9d9c9e8e;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-    #omnie pre {
-        width: 224%;
-        font-size: xx-small;
-        flex-wrap: wrap;
-        overflow-x: auto;
-        white-space: pre-wrap;
-        word-break: break-word;
+.kontakt-img img {
+    border-radius: 17px;
+    width: 450px;
 
-    }
+}
 
-    #umiejetnosci ul {
-        display: grid;
-        grid-template-columns: repeat(1, 3fr);
-        width: 60%;
-
-    }
+.kontakt-form {
+    display: grid;
+    flex-direction: column;
+    gap: 20px;
+    width: 350px;
 }
 
 #kontakt p {
-
-    display: flex;
-    justify-content: center;
+    font-size: 2rem;
+    font-weight: 700;
     font-size: 1.2rem;
     color: #bbb;
-}
-
-.przycisk {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    background-color: #7c3aed;
-    color: white;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.przycisk:hover {
-    background-color: #5a2abf;
-}
-
-#kontakt {
-    display: flex;
-    margin-top: 100px;
-    flex-direction: column;
-    align-items: center;
-    background: rgba(255, 255, 255, 0.03);
-    padding: 40px 20px;
 }
 
 .form {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 15px;
-    width: 100%;
-    border-radius: 10px;
-    background-color: #1a1a40;
 }
 
 #name,
 #email,
 #message {
-    width: 80%;
-    padding: 10px;
-    border-radius: 5px;
-    border: none;
-    background-color: #2a2a5a;
+    width: 100%;
+    padding: 14px;
+    border-radius: 8px;
+    border: 1px solid #3a3a6a;
+    background-color: #1a1a40;
     color: white;
 }
 
+#name:focus,
+#email:focus,
+#message:focus {
+    outline: none;
+    border: 1px solid #7c3aed;
+    box-shadow: 0 0 10px #7c3aed;
+}
+
+#message {
+    min-height: 120px;
+}
+
+.przycisk {
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(90deg, #7c3aed, #5a2abf);
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 
 
@@ -626,5 +640,113 @@ footer {
 
     100% {
         content: " Junior Frontend Developer_";
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    .github-logo {
+        display: none;
+    }
+
+    pre {
+        font-size: 0.8rem;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+        align-items: center;
+    }
+
+    .kontakt-container {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .github-link {
+        display: block;
+    }
+
+    .develp,
+    .scroll {
+        z-index: 100;
+    }
+
+    .tlo {
+        border: none;
+    }
+
+    p {
+        z-index: 100;
+    }
+
+    .projekty-grid {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 20px;
+    }
+
+    .kontakt-img img {
+        display: none;
+    }
+
+
+
+
+    #omnie pre {
+        width: 130%;
+        font-size: 0.75rem;
+        flex-wrap: wrap;
+        overflow-x: auto;
+        white-space: pre-wrap;
+        word-break: break-word;
+        padding: 15px;
+    }
+
+    #umiejetnosci ul {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 10px;
+    }
+
+    .flip-karta {
+        max-width: 100%;
+        width: 100%;
+    }
+
+    .vl {
+        height: 500%;
+        top: 540px;
+    }
+
+    .edytor {
+        width: 110%;
+    }
+
+    .edytor {
+        width: 95%;
+    }
+
+    pre {
+        font-size: 1px;
+        padding: 15px;
+    }
+
+    .edytor {
+        width: 111%;
+    }
+
+}
+
+
+
+@keyframes fade {
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }
